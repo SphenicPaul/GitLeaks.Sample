@@ -150,8 +150,7 @@ title = "gitleaks config"
 	tags = ["key", "API", "generic"]
 	# ignore leaks with specific identifiers like slack and aws
 	[rules.allowlist]
-		description = "ignore slack, mailchimp, aws and certain file types"
-	  files = ['''(.*?)(jpg|gif|doc|pdf|bin|cs)$''','''(.*?).gitleaks.toml$''']
+		description = "ignore slack, mailchimp, aws"
 		regexes = [
 		    '''xox[baprs]-([0-9a-zA-Z]{10,48})''',
 		    '''(?i)(.{0,20})?['"][0-9a-f]{32}-us[0-9]{1,2}['"]''',
@@ -190,3 +189,6 @@ title = "gitleaks config"
     file = '''(?i)(id_rsa|passwd|id_rsa.pub|pgpass|pem|key|shadow)'''
 
 # Global allowlist
+[allowlist]
+	description = "image allowlists"
+	files = ['''(.*?)(jpg|gif|doc|pdf|bin|cs)$''','''(.*?).gitleaks.toml$''']
