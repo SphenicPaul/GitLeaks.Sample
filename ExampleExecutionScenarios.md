@@ -10,7 +10,7 @@
 .\bin\gitleaks-windows-amd64.exe --repo-config-path ".gitleaks.CsInGlobalAllowlist.toml" --redact --unstaged --format=json --leaks-exit-code=0 --quiet
 ```
 
-#### 3) Update 'ExampleClass.cs' to add another like with an API key. Save but don't stage or commit.
+#### 3) Update 'ExampleClass.cs' to add another line with an API key. Save the file but don't stage or commit.
 
 
 #### 4) Both the below now run but 'CsInGlobalAllowlist' DOES highlight the 'Leak' in the unstaged and uncommitted file, when it's expected it shouldn't
